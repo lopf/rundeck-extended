@@ -33,7 +33,7 @@ RUN sudo apt-get update \
   && sudo apt-get install -y jq
 
 # see https://github.com/rundeck/docker-zoo/tree/master/config
-COPY --chown=rundeck:root remco /etc/remco
+#COPY --chown=rundeck:root ./remco/ /etc/
 
 # set
 #RUN echo "rundeck.feature.option-values-plugin.enabled=true" >> ${RDECK_BASE}/server/config/rundeck-config.properties
@@ -43,5 +43,5 @@ COPY --chown=rundeck:root remco /etc/remco
 
 # add locally built ansible plugin
 #COPY --chown=rundeck:rundeck build/libs/ansible-plugin-*.jar ${RDECK_BASE}/libext/
-COPY --chown=rundeck:rundeck plugins/*.zip ${RDECK_BASE}/libext/
-COPY --chown=rundeck:rundeck plugins/*.jar ${RDECK_BASE}/libext/
+COPY --chown=rundeck:rundeck ./plugins/*.zip ${RDECK_BASE}/libext/
+COPY --chown=rundeck:rundeck ./plugins/*.jar ${RDECK_BASE}/libext/
