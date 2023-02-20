@@ -1,0 +1,7 @@
+git clone https://github.com/rundeck-plugins/ui-job-graph.git
+
+# use java 8 on macOS
+
+JAVA_HOME=`/usr/libexec/java_home -v 1.8` ./gradlew build
+
+# copy the resulting ZIP from build/ .. to plugins

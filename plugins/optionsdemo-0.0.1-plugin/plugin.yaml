@@ -1,0 +1,25 @@
+name: rundeck-demo-inputs-plugin
+version: 1.0
+rundeckPluginVersion: 1.2
+author: Y. Mama
+date: 2021-20-05
+providers:
+  - name: My Demo Input
+    service: OptionValues
+    plugin-type: script
+    script-interpreter: /bin/bash
+    script-file: generate_inputs.sh
+    #script-args: ${config.who_i_am} ${config.secret_secret}
+    config:
+      - name: who_i_am
+        type: Select
+        title: Who I Am
+        description: Provide a predefined list of options
+        values: machine, mannequin
+        default: machine
+      - name: secret_secret
+        type: String
+        title: My Secret
+        description: Securely pass this to the script
+        renderingOptions:
+          valueConversion: "STORAGE_PATH_AUTOMATIC_READ"
