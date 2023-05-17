@@ -1,5 +1,4 @@
-ARG RUNDECK_IMAGE_VERSION
-FROM rundeck/rundeck:${RUNDECK_IMAGE_VERSION}
+FROM rundeck/rundeck:4.12.0
 
 ENV RDECK_BASE=/home/rundeck
 ENV MANPATH=${MANPATH}:${RDECK_BASE}/docs/man

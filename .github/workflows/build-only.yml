@@ -36,5 +36,3 @@ jobs:
           push: false
           tags: ${{ steps.meta.outputs.tags }},lopf/rundeck-extended:latest
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            RUNDECK_IMAGE_VERSION=4.11.0
