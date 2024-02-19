@@ -1,4 +1,4 @@
-FROM rundeck/rundeck:5.0.1
+FROM rundeck/rundeck:5.1.0
 
 ENV RDECK_BASE=/home/rundeck
 ENV MANPATH=${MANPATH}:${RDECK_BASE}/docs/man
