@@ -689,7 +689,7 @@ from ansible.module_utils.urls import fetch_url
 
 class JIRA(StateModuleHelper):
     
-    def _format_comment_body(self, comment_text, format_type='jira_markup', api_version='2'):
+    def _format_comment_body(self, comment_text, format_type='jira_markup', api_version='3'):
         """
         Convert comment text to appropriate format based on API version and format type.
         
