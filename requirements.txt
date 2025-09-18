@@ -1,2 +1,2 @@
-ansible==12.*
+ansible==10.*
 pywinrm==0.4

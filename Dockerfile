@@ -44,3 +44,6 @@ COPY --chown=rundeck:root remco /etc/remco
 #COPY --chown=rundeck:rundeck build/libs/ansible-plugin-*.jar ${RDECK_BASE}/libext/
 COPY --chown=rundeck:rundeck ./plugins/*.zip ${RDECK_BASE}/libext/
 COPY --chown=rundeck:rundeck ./plugins/*.jar ${RDECK_BASE}/libext/
+
+# patch jira.py, open issue https://github.com/ansible-collections/community.general/issues/10786
+COPY --chown=rundeck:rundeck patches/jira.py /usr/local/lib/python3.10/dist-packages/ansible_collections/community/general/plugins/modules/web_infrastructure/jira.py
